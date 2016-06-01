@@ -1,6 +1,4 @@
-# The Bank Tech Test
-
->When in doubt, go for the simplest solution
+# Bank Tech Test
 
 ### Requirements
 * Deposits, withdrawal
@@ -22,8 +20,25 @@ date || credit || debit || balance
 13/01/2012 || 2000.00 || || 3000.00
 10/01/2012 || 1000.00 || || 1000.00
 ```
+How to use:
 
-### Additional extensions
+```
+$ git clone https://github.com/vickymg/bank_tech_test.git
+$ cd bank_tech_test
+$ bundle
+```
+To run tests:
+```
+$ rspec
+```
 
-* Statement filters (just deposits, withdrawals, date ascending, date descending)
-* Graphical interface
+To run the program in IRB:
+```
+$ irb
+> require './lib/bank.rb'
+> bank = Bank.new
+> bank.deposit(100, "01/06/2016")
+> bank.deposit(100, "02/06/2016")
+> bank.withdraw(50, "03/06/2016")
+> bank.print_statement
+```
